@@ -5,10 +5,10 @@
         [
             {
                 "caption": "-",
-                "id": "origami"
+                "id": "origami2"
             },
             {
-                "caption": "Origami",
+                "caption": "Origami-2",
                 "children":
                 [
                     {
@@ -19,12 +19,12 @@
                                 "caption": "Create",
                                 "children":
                                 [
-                                    { "command": "create_pane", "args": {"direction": "up"}, "caption": "Above" },
-                                    { "command": "create_pane", "args": {"direction": "down"}, "caption": "Below" },
-                                    { "command": "create_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "create_pane", "args": {"direction": "left"}, "caption": "Left" },
+                                    { "command": "create_pane2", "args": {"direction": "up"}, "caption": "Above" },
+                                    { "command": "create_pane2", "args": {"direction": "down"}, "caption": "Below" },
+                                    { "command": "create_pane2", "args": {"direction": "right"}, "caption": "Right" },
+                                    { "command": "create_pane2", "args": {"direction": "left"}, "caption": "Left" },
                                     {
-                                        "command": "create_layout",
+                                        "command": "create_layout2",
                                         "args": {"layout": {"rows": [0.0, 0.5, 1.0], "cols": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 2], [0, 1, 1, 1], [1, 1, 1, 1]]}},
                                         "caption": "3-Pane Layout"
                                     }
@@ -34,10 +34,10 @@
                                 "caption": "Travel to",
                                 "children":
                                 [
-                                    { "command": "travel_to_pane", "args": {"direction": "up"}, "caption": "Above" },
-                                    { "command": "travel_to_pane", "args": {"direction": "down"}, "caption": "Below" },
-                                    { "command": "travel_to_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "travel_to_pane", "args": {"direction": "left"}, "caption": "Left" }
+                                    { "command": "travel_to_pane2", "args": {"direction": "up"}, "caption": "Above" },
+                                    { "command": "travel_to_pane2", "args": {"direction": "down"}, "caption": "Below" },
+                                    { "command": "travel_to_pane2", "args": {"direction": "right"}, "caption": "Right" },
+                                    { "command": "travel_to_pane2", "args": {"direction": "left"}, "caption": "Left" }
                                 ]
                             },
                             {
@@ -47,10 +47,10 @@
                                 "caption": "Destroy",
                                 "children":
                                 [
-                                    { "command": "destroy_pane", "args": {"direction": "up"}, "caption": "Above" },
-                                    { "command": "destroy_pane", "args": {"direction": "down"}, "caption": "Below" },
-                                    { "command": "destroy_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "destroy_pane", "args": {"direction": "left"}, "caption": "Left" }
+                                    { "command": "destroy_pane2", "args": {"direction": "up"}, "caption": "Above" },
+                                    { "command": "destroy_pane2", "args": {"direction": "down"}, "caption": "Below" },
+                                    { "command": "destroy_pane2", "args": {"direction": "right"}, "caption": "Right" },
+                                    { "command": "destroy_pane2", "args": {"direction": "left"}, "caption": "Left" }
                                 ]
                             }
                         ]
@@ -63,27 +63,27 @@
                                 "caption": "Carry to",
                                 "children":
                                 [
-                                    { "command": "carry_file_to_pane", "args": {"direction": "up"}, "caption": "Above" },
-                                    { "command": "carry_file_to_pane", "args": {"direction": "down"}, "caption": "Below" },
-                                    { "command": "carry_file_to_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "carry_file_to_pane", "args": {"direction": "left"}, "caption": "Left" }
+                                    { "command": "carry_file_to_pane2", "args": {"direction": "up"}, "caption": "Above" },
+                                    { "command": "carry_file_to_pane2", "args": {"direction": "down"}, "caption": "Below" },
+                                    { "command": "carry_file_to_pane2", "args": {"direction": "right"}, "caption": "Right" },
+                                    { "command": "carry_file_to_pane2", "args": {"direction": "left"}, "caption": "Left" }
                                 ]
                             },
                             {
                                 "caption": "Clone to",
                                 "children":
                                 [
-                                    { "command": "clone_file_to_pane", "args": {"direction": "up"}, "caption": "Above" },
-                                    { "command": "clone_file_to_pane", "args": {"direction": "down"}, "caption": "Below" },
-                                    { "command": "clone_file_to_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "clone_file_to_pane", "args": {"direction": "left"}, "caption": "Left" }
+                                    { "command": "clone_file_to_pane2", "args": {"direction": "up"}, "caption": "Above" },
+                                    { "command": "clone_file_to_pane2", "args": {"direction": "down"}, "caption": "Below" },
+                                    { "command": "clone_file_to_pane2", "args": {"direction": "right"}, "caption": "Right" },
+                                    { "command": "clone_file_to_pane2", "args": {"direction": "left"}, "caption": "Left" }
                                 ]
                             }
                         ]
                     },
                     {
                         "caption": "Reset",
-                        "command": "reset_layout"
+                        "command": "reset_layout2"
                     }
                 ]
             }

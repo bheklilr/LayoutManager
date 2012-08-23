@@ -38,6 +38,6 @@
       }
     }
   },
-  { "keys": ["super+k", "super+r"], "command2": "reset_layout"}
+  { "keys": ["super+k", "super+r"], "command": "reset_layout2"}
 
 ]
