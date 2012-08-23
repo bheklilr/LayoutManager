@@ -11,10 +11,12 @@ Keyboard shortcuts
 Origami is driven by keyboard shortcuts. By default, these keyboard shortcuts are all two-stage, and are hidden behind `super+k`. First press `super+k`, then press the arrow keys with modifiers:
 
 * no modifiers: travel to an adjacent pane
-* `super`: carry the current file to the destination
+* `super`: carry the current file to the destination, creating a pane if needed.
 * `alt` (`option`): clone the current file to the destination
 * `shift`: create an adjacent pane
 * `super+shift`: destroy an adjacent pane
+* `super+r`: reset the layout, moving all open files to one pane
+* `super+k`: immediately create a two column layout of three panes with the left pane spanning two rows.
 
 These keyboard shortcuts are designed to make it really easy to modify the layout of your editor.
 
