@@ -48,7 +48,7 @@ class PaneCommand(sublime_plugin.WindowCommand):
 
 	def get_layout(self):
 		layout = self.window.get_layout()
-		print layout
+		#print layout
 		cells = layout["cells"]
 		rows = layout["rows"]
 		cols = layout["cols"]
@@ -126,7 +126,7 @@ class PaneCommand(sublime_plugin.WindowCommand):
 			cells.insert(current_group, focused_cell)
 			cells.append(unfocused_cell)
 			layout = {"cols": cols, "rows": rows, "cells": cells}
-			print layout
+			#print layout
 			window.set_layout(layout)
 
 	def destroy_pane(self, direction):
@@ -138,7 +138,7 @@ class PaneCommand(sublime_plugin.WindowCommand):
 		current_cell = cells[current_group]
 
 		adjacent_cells = cells_adjacent_to_cell_in_direction(cells, current_cell, direction)
-		print "number adjacent: ", len(adjacent_cells)
+		#print "number adjacent: ", len(adjacent_cells)
 		if len(adjacent_cells) == 1:
 			cell_to_remove = adjacent_cells[0]
 
@@ -169,13 +169,14 @@ class PaneCommand(sublime_plugin.WindowCommand):
 					cells[cells.index(cell)][XMIN] = cell_to_remove[XMIN]
 				cells = pull_left_cells_after(cells, cell_to_remove[XMAX])
 			layout = {"cols": cols, "rows": rows, "cells": cells}
-			print layout
+			#print layout
 			window.set_layout(layout)
 
 	def reset_layout(self):
-		index = max([self.window.get_view_index(v)[1] for v in self.window.views_in_group(0)])
+		# the '[0] + ' ensures that max will always return a number, since max([]) return []
+		index = max([0] + [self.window.get_view_index(v)[1] for v in self.window.views_in_group(0)])
 		for view in self.window.views():
-			group, index = self.window.get_view_index(view)
+			group, _ = self.window.get_view_index(view)
 			if group != 0:
 				self.window.set_view_index(view, 0, index + 1)
 				index += 1
@@ -199,13 +200,13 @@ class CloneFileToPane2Command(PaneCommand):
 
 class CreatePane2Command(PaneCommand):
 	def run(self, direction):
-		print "creating"
+		#print "creating"
 		self.create_pane(direction)
 
 
 class DestroyPane2Command(PaneCommand):
 	def run(self, direction):
-		print "destroying"
+		#print "destroying"
 		self.destroy_pane(direction)
 
 class CreateLayout2Command(PaneCommand):
