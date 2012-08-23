@@ -174,7 +174,7 @@ class PaneCommand(sublime_plugin.WindowCommand):
 			print layout
 			window.set_layout(layout)
 
-	def reset_pane(self):
+	def reset_layout(self):
 		index = max([self.window.get_view_index(v)[1] for v in self.window.views_in_group(0)])
 		for view in self.window.views():
 			group, index = self.window.get_view_index(view)
@@ -212,8 +212,9 @@ class DestroyPane2Command(PaneCommand):
 
 class CreateLayout2Command(PaneCommand):
 	def run(self, **kwargs):
+		self.reset_layout()
 		self.window.set_layout(kwargs["layout"])
 
 class ResetLayout2Command(PaneCommand):
 	def run(self):
-		self.reset_pane()
+		self.reset_layout()
