@@ -22,7 +22,12 @@
                                     { "command": "create_pane", "args": {"direction": "up"}, "caption": "Above" },
                                     { "command": "create_pane", "args": {"direction": "down"}, "caption": "Below" },
                                     { "command": "create_pane", "args": {"direction": "right"}, "caption": "Right" },
-                                    { "command": "create_pane", "args": {"direction": "left"}, "caption": "Left" }
+                                    { "command": "create_pane", "args": {"direction": "left"}, "caption": "Left" },
+                                    {
+                                        "command": "create_layout",
+                                        "args": {"layout": {"rows": [0.0, 0.5, 1.0], "cols": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 2], [0, 1, 1, 1], [1, 1, 1, 1]]}},
+                                        "caption": "3-Pane Layout"
+                                    }
                                 ]
                             },
                             {
@@ -75,6 +80,10 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "caption": "Reset",
+                        "command": "reset_layout"
                     }
                 ]
             }

@@ -1,26 +1,43 @@
 [
-  { "keys": ["ctrl+k", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
-  { "keys": ["ctrl+k", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
-  { "keys": ["ctrl+k", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
-  { "keys": ["ctrl+k", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
-  
-  { "keys": ["ctrl+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
-  { "keys": ["ctrl+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
-  { "keys": ["ctrl+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-  { "keys": ["ctrl+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
-  
-  { "keys": ["ctrl+k", "alt+up"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
-  { "keys": ["ctrl+k", "alt+right"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
-  { "keys": ["ctrl+k", "alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
-  { "keys": ["ctrl+k", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
-  
-  { "keys": ["ctrl+k", "ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
-  { "keys": ["ctrl+k", "ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },
-  { "keys": ["ctrl+k", "ctrl+down"], "command": "create_pane", "args": {"direction": "down"} },
-  { "keys": ["ctrl+k", "ctrl+left"], "command": "create_pane", "args": {"direction": "left"} },
-  
-  { "keys": ["ctrl+k", "ctrl+shift+up"], "command": "destroy_pane", "args": {"direction": "up"} },
-  { "keys": ["ctrl+k", "ctrl+shift+right"], "command": "destroy_pane", "args": {"direction": "right"} },
-  { "keys": ["ctrl+k", "ctrl+shift+down"], "command": "destroy_pane", "args": {"direction": "down"} },
-  { "keys": ["ctrl+k", "ctrl+shift+left"], "command": "destroy_pane", "args": {"direction": "left"} }
+  { "keys": ["ctrl+k", "up"], "command": "travel_to_pane2", "args": {"direction": "up"} },
+  { "keys": ["ctrl+k", "right"], "command": "travel_to_pane2", "args": {"direction": "right"} },
+  { "keys": ["ctrl+k", "down"], "command": "travel_to_pane2", "args": {"direction": "down"} },
+  { "keys": ["ctrl+k", "left"], "command": "travel_to_pane2", "args": {"direction": "left"} },
+
+  { "keys": ["ctrl+k", "ctrl+up"], "command": "carry_file_to_pane2", "args": {"direction": "up"} },
+  { "keys": ["ctrl+k", "ctrl+right"], "command": "carry_file_to_pane2", "args": {"direction": "right"} },
+  { "keys": ["ctrl+k", "ctrl+down"], "command": "carry_file_to_pane2", "args": {"direction": "down"} },
+  { "keys": ["ctrl+k", "ctrl+left"], "command": "carry_file_to_pane2", "args": {"direction": "left"} },
+
+  { "keys": ["ctrl+k", "alt+up"], "command": "clone_file_to_pane2", "args": {"direction": "up"} },
+  { "keys": ["ctrl+k", "alt+right"], "command": "clone_file_to_pane2", "args": {"direction": "right"} },
+  { "keys": ["ctrl+k", "alt+down"], "command": "clone_file_to_pane2", "args": {"direction": "down"} },
+  { "keys": ["ctrl+k", "alt+left"], "command": "clone_file_to_pane2", "args": {"direction": "left"} },
+
+  { "keys": ["ctrl+k", "shift+up"], "command": "create_pane2", "args": {"direction": "up"} },
+  { "keys": ["ctrl+k", "shift+right"], "command": "create_pane2", "args": {"direction": "right"} },
+  { "keys": ["ctrl+k", "shift+down"], "command": "create_pane2", "args": {"direction": "down"} },
+  { "keys": ["ctrl+k", "shift+left"], "command": "create_pane2", "args": {"direction": "left"} },
+
+  { "keys": ["ctrl+k", "ctrl+shift+up"], "command": "destroy_pane2", "args": {"direction": "up"} },
+  { "keys": ["ctrl+k", "ctrl+shift+right"], "command": "destroy_pane2", "args": {"direction": "right"} },
+  { "keys": ["ctrl+k", "ctrl+shift+down"], "command": "destroy_pane2", "args": {"direction": "down"} },
+  { "keys": ["ctrl+k", "ctrl+shift+left"], "command": "destroy_pane2", "args": {"direction": "left"} },
+
+  {
+    "keys": ["ctrl+k", "ctrl+k"],
+    "command": "create_layout2",
+    "args": {
+      "layout": {
+        "cells": [
+          [0, 0, 1, 3], [0, 1, 2, 1],
+          [1, 0, 2, 2], [1, 2, 2, 3]
+        ],
+        "rows": [0.0, 0.5, 0.5, 1.0],
+        "cols": [0.0, 0.5, 1.0]
+      }
+    }
+  },
+  { "keys": ["ctrl+k", "ctrl+r"], "command2": "reset_layout"}
+
 ]

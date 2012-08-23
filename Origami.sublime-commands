@@ -1,26 +1,42 @@
 [
-	{ "command": "travel_to_pane", "args": {"direction": "up"}, "caption": "Origami: Focus on Pane Above" },
-	{ "command": "travel_to_pane", "args": {"direction": "right"}, "caption": "Origami: Focus on Pane on the Right" },
-	{ "command": "travel_to_pane", "args": {"direction": "down"}, "caption": "Origami: Focus on Pane Below" },
-	{ "command": "travel_to_pane", "args": {"direction": "left"}, "caption": "Origami: Focus on Pane on the Left" },
-	
-	{ "command": "carry_file_to_pane", "args": {"direction": "up"}, "caption": "Origami: Move File to Pane Above" },
-	{ "command": "carry_file_to_pane", "args": {"direction": "right"}, "caption": "Origami: Move File to Pane on the Right" },
-	{ "command": "carry_file_to_pane", "args": {"direction": "down"}, "caption": "Origami: Move File to Pane Below" },
-	{ "command": "carry_file_to_pane", "args": {"direction": "left"}, "caption": "Origami: Move File to Pane on the Left" },
-	
-	{ "command": "clone_file_to_pane", "args": {"direction": "up"}, "caption": "Origami: Clone File to Pane Above" },
-	{ "command": "clone_file_to_pane", "args": {"direction": "right"}, "caption": "Origami: Clone File to Pane on the Right" },
-	{ "command": "clone_file_to_pane", "args": {"direction": "down"}, "caption": "Origami: Clone File to Pane Below" },
-	{ "command": "clone_file_to_pane", "args": {"direction": "left"}, "caption": "Origami: Clone File to Pane on the Left" },
-	
-	{ "command": "create_pane", "args": {"direction": "up"}, "caption": "Origami: Create Pane Above" },
-	{ "command": "create_pane", "args": {"direction": "right"}, "caption": "Origami: Create Pane on the Right" },
-	{ "command": "create_pane", "args": {"direction": "down"}, "caption": "Origami: Create Pane Below" },
-	{ "command": "create_pane", "args": {"direction": "left"}, "caption": "Origami: Create Pane on the Left" },
-	
-	{ "command": "destroy_pane", "args": {"direction": "up"}, "caption": "Origami: Destroy Pane Above" },
-	{ "command": "destroy_pane", "args": {"direction": "right"}, "caption": "Origami: Destroy Pane on the Right" },
-	{ "command": "destroy_pane", "args": {"direction": "down"}, "caption": "Origami: Destroy Pane Below" },
-	{ "command": "destroy_pane", "args": {"direction": "left"}, "caption": "Origami: Destroy Pane on the Left" }
+	{ "command": "travel_to_pane2", "args": {"direction": "up"}, "caption": "Origami-2: Focus on Pane Above" },
+	{ "command": "travel_to_pane2", "args": {"direction": "right"}, "caption": "Origami-2: Focus on Pane on the Right" },
+	{ "command": "travel_to_pane2", "args": {"direction": "down"}, "caption": "Origami-2: Focus on Pane Below" },
+	{ "command": "travel_to_pane2", "args": {"direction": "left"}, "caption": "Origami-2: Focus on Pane on the Left" },
+
+	{ "command": "carry_file_to_pane2", "args": {"direction": "up"}, "caption": "Origami-2: Move File to Pane Above" },
+	{ "command": "carry_file_to_pane2", "args": {"direction": "right"}, "caption": "Origami-2: Move File to Pane on the Right" },
+	{ "command": "carry_file_to_pane2", "args": {"direction": "down"}, "caption": "Origami-2: Move File to Pane Below" },
+	{ "command": "carry_file_to_pane2", "args": {"direction": "left"}, "caption": "Origami-2: Move File to Pane on the Left" },
+
+	{ "command": "clone_file_to_pane2", "args": {"direction": "up"}, "caption": "Origami-2: Clone File to Pane Above" },
+	{ "command": "clone_file_to_pane2", "args": {"direction": "right"}, "caption": "Origami-2: Clone File to Pane on the Right" },
+	{ "command": "clone_file_to_pane2", "args": {"direction": "down"}, "caption": "Origami-2: Clone File to Pane Below" },
+	{ "command": "clone_file_to_pane2", "args": {"direction": "left"}, "caption": "Origami-2: Clone File to Pane on the Left" },
+
+	{ "command": "create_pane2", "args": {"direction": "up"}, "caption": "Origami-2: Create Pane Above" },
+	{ "command": "create_pane2", "args": {"direction": "right"}, "caption": "Origami-2: Create Pane on the Right" },
+	{ "command": "create_pane2", "args": {"direction": "down"}, "caption": "Origami-2: Create Pane Below" },
+	{ "command": "create_pane2", "args": {"direction": "left"}, "caption": "Origami-2: Create Pane on the Left" },
+
+	{ "command": "destroy_pane2", "args": {"direction": "up"}, "caption": "Origami-2: Destroy Pane Above" },
+	{ "command": "destroy_pane2", "args": {"direction": "right"}, "caption": "Origami-2: Destroy Pane on the Right" },
+	{ "command": "destroy_pane2", "args": {"direction": "down"}, "caption": "Origami-2: Destroy Pane Below" },
+	{ "command": "destroy_pane2", "args": {"direction": "left"}, "caption": "Origami-2: Destroy Pane on the Left" },
+
+	{
+		"command": "create_layout2",
+		"args": {
+			"layout": {
+				"cells": [
+					[0, 0, 1, 3], [0, 1, 2, 1],
+					[1, 0, 2, 2], [1, 2, 2, 3]
+				],
+				"rows": [0.0, 0.5, 0.5, 1.0],
+				"cols": [0.0, 0.5, 1.0]
+			}
+		},
+		"caption": "Origami: Create 3-pane layout"
+	},
+	{ "command": "reset_layout2", "caption": "Origami: Reset Layout" }
 ]
