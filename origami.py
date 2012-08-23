@@ -66,33 +66,31 @@ class PaneCommand(sublime_plugin.WindowCommand):
 	def carry_file_to_pane(self, direction):
 		view = self.window.active_view()
 		window = self.window
-		from_group = self.window.active_group()
+		from_group = window.active_group()
 		group = self.travel_to_pane(direction)
-		to_group = self.window.active_group()
+		to_group = window.active_group()
 		# Check create the pane if it doesn't exist
 		if from_group == to_group:
 			self.create_pane(direction)
 			self.travel_to_pane(direction)
+			to_group = window.active_group()
 		# Get the index of the last view in the group being moved to so it places the view at the end of the list
 		if len(window.views_in_group(to_group)) > 0:
 			index = max([window.get_view_index(v)[1] for v in window.views_in_group(to_group)]) + 1
 		else:
 			index = 0
 		# moving the view
-		try:
-			window.set_view_index(view, to_group, index)
-			# delete moved from group if now empty
-			if len(self.window.views_in_group(from_group)) == 0:
-				if direction == "up":
-					self.destroy_pane("down")
-				elif direction == "down":
-					self.destroy_pane("up")
-				elif direction == "left":
-					self.destroy_pane("right")
-				elif direction == "right":
-					self.destroy_pane("left")
-		except:
-			print "Error moving file or deleting empty group"
+		window.set_view_index(view, to_group, index)
+		# delete moved from group if now empty
+		if len(window.views_in_group(from_group)) == 0:
+			if direction == "up":
+				self.destroy_pane("down")
+			elif direction == "down":
+				self.destroy_pane("up")
+			elif direction == "left":
+				self.destroy_pane("right")
+			elif direction == "right":
+				self.destroy_pane("left")
 
 	def clone_file_to_pane(self, direction):
 		self.window.run_command("clone_file")
