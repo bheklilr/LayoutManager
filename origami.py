@@ -83,14 +83,15 @@ class PaneCommand(sublime_plugin.WindowCommand):
 		window.set_view_index(view, to_group, index)
 		# delete moved from group if now empty
 		if len(window.views_in_group(from_group)) == 0:
-			if direction == "up":
-				self.destroy_pane("down")
-			elif direction == "down":
-				self.destroy_pane("up")
-			elif direction == "left":
-				self.destroy_pane("right")
-			elif direction == "right":
-				self.destroy_pane("left")
+			if len(window.views_in_group(to_group)) > 1:
+				if direction == "up":
+					self.destroy_pane("down")
+				elif direction == "down":
+					self.destroy_pane("up")
+				elif direction == "left":
+					self.destroy_pane("right")
+				elif direction == "right":
+					self.destroy_pane("left")
 
 	def clone_file_to_pane(self, direction):
 		self.window.run_command("clone_file")
