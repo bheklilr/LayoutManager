@@ -218,3 +218,16 @@ class CreateLayout2Command(PaneCommand):
 class ResetLayout2Command(PaneCommand):
 	def run(self):
 		self.reset_layout()
+
+processed_views = []
+
+class ResetLayoutOnNewWindowListener(sublime_plugin.EventListener):
+	def on_activated(self, view):
+		if view.id() in processed_views:
+			return None
+		win = view.window()
+		if win is not None:
+			if len(win.views()) <= 1:
+				if win.num_groups() > 1:
+					processed_views.append(view.id())
+					win.run_command("reset_layout2")
