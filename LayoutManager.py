@@ -43,9 +43,7 @@ def cells_adjacent_to_cell_in_direction(cells, cell, direction):
 		return [c for c in cells if fn(cell, c)]
 	return None
 
-class PaneCommand(sublime_plugin.WindowCommand):
-	"Abstract base class for commands."
-
+class PaneManager(sublime_plugin.WindowCommand):
 	def get_layout(self):
 		layout = self.window.get_layout()
 		#print layout
@@ -183,39 +181,36 @@ class PaneCommand(sublime_plugin.WindowCommand):
 				index += 1
 		self.window.set_layout({"rows": [0.0, 1.0], "cols": [0.0, 1.0], "cells": [[0, 0, 1, 1]]})
 
-
-class TravelToPane2Command(PaneCommand):
+class TravelToPaneCommand(PaneManager):
 	def run(self, direction):
 		self.travel_to_pane(direction)
 
 
-class CarryFileToPane2Command(PaneCommand):
+class CarryFileToPaneCommand(PaneManager):
 	def run(self, direction):
 		self.carry_file_to_pane(direction)
 
 
-class CloneFileToPane2Command(PaneCommand):
+class CloneFileToPaneCommand(PaneManager):
 	def run(self, direction):
 		self.clone_file_to_pane(direction)
 
 
-class CreatePane2Command(PaneCommand):
+class CreatePaneCommand(PaneManager):
 	def run(self, direction):
-		#print "creating"
 		self.create_pane(direction)
 
 
-class DestroyPane2Command(PaneCommand):
+class DestroyPaneCommand(PaneManager):
 	def run(self, direction):
-		#print "destroying"
 		self.destroy_pane(direction)
 
-class CreateLayout2Command(PaneCommand):
+class CreateLayoutCommand(PaneManager):
 	def run(self, **kwargs):
 		self.reset_layout()
 		self.window.set_layout(kwargs["layout"])
 
-class ResetLayout2Command(PaneCommand):
+class ResetLayoutCommand(PaneManager):
 	def run(self):
 		self.reset_layout()
 
@@ -230,4 +225,4 @@ class ResetLayoutOnNewWindowListener(sublime_plugin.EventListener):
 			if len(win.views()) <= 1:
 				if win.num_groups() > 1:
 					processed_views.append(view.id())
-					win.run_command("reset_layout2")
+					win.run_command("reset_layout")

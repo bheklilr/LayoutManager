@@ -1,0 +1,42 @@
+[
+	{ "command": "travel_to_pane", "args": {"direction": "up"}, "caption": "Layout Manager: Focus on Pane Above" },
+	{ "command": "travel_to_pane", "args": {"direction": "right"}, "caption": "Layout Manager: Focus on Pane on the Right" },
+	{ "command": "travel_to_pane", "args": {"direction": "down"}, "caption": "Layout Manager: Focus on Pane Below" },
+	{ "command": "travel_to_pane", "args": {"direction": "left"}, "caption": "Layout Manager: Focus on Pane on the Left" },
+
+	{ "command": "carry_file_to_pane", "args": {"direction": "up"}, "caption": "Layout Manager: Move File to Pane Above" },
+	{ "command": "carry_file_to_pane", "args": {"direction": "right"}, "caption": "Layout Manager: Move File to Pane on the Right" },
+	{ "command": "carry_file_to_pane", "args": {"direction": "down"}, "caption": "Layout Manager: Move File to Pane Below" },
+	{ "command": "carry_file_to_pane", "args": {"direction": "left"}, "caption": "Layout Manager: Move File to Pane on the Left" },
+
+	{ "command": "clone_file_to_pane", "args": {"direction": "up"}, "caption": "Layout Manager: Clone File to Pane Above" },
+	{ "command": "clone_file_to_pane", "args": {"direction": "right"}, "caption": "Layout Manager: Clone File to Pane on the Right" },
+	{ "command": "clone_file_to_pane", "args": {"direction": "down"}, "caption": "Layout Manager: Clone File to Pane Below" },
+	{ "command": "clone_file_to_pane", "args": {"direction": "left"}, "caption": "Layout Manager: Clone File to Pane on the Left" },
+
+	{ "command": "create_pane", "args": {"direction": "up"}, "caption": "Layout Manager: Create Pane Above" },
+	{ "command": "create_pane", "args": {"direction": "right"}, "caption": "Layout Manager: Create Pane on the Right" },
+	{ "command": "create_pane", "args": {"direction": "down"}, "caption": "Layout Manager: Create Pane Below" },
+	{ "command": "create_pane", "args": {"direction": "left"}, "caption": "Layout Manager: Create Pane on the Left" },
+
+	{ "command": "destroy_pane", "args": {"direction": "up"}, "caption": "Layout Manager: Destroy Pane Above" },
+	{ "command": "destroy_pane", "args": {"direction": "right"}, "caption": "Layout Manager: Destroy Pane on the Right" },
+	{ "command": "destroy_pane", "args": {"direction": "down"}, "caption": "Layout Manager: Destroy Pane Below" },
+	{ "command": "destroy_pane", "args": {"direction": "left"}, "caption": "Layout Manager: Destroy Pane on the Left" },
+
+	{
+		"command": "create_layout",
+		"args": {
+			"layout": {
+				"cells": [
+					[0, 0, 1, 3], [0, 1, 2, 1],
+					[1, 0, 2, 2], [1, 2, 2, 3]
+				],
+				"rows": [0.0, 0.5, 0.5, 1.0],
+				"cols": [0.0, 0.5, 1.0]
+			}
+		},
+		"caption": "Layout Manager: Create 3-pane layout"
+	},
+	{ "command": "reset_layout", "caption": "Layout Manager: Reset Layout" }
+]

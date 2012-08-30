@@ -1,6 +1,6 @@
-Origami 2
-=========
-Origami 2 is a new way of thinking about panes in Sublime Text: you tell Sublime Text where you want a new pane, and it makes one for you.  This plugin was adapted from the original Origami plugin in the Sublime Text repository
+Layout Manager
+==============
+Layout Manager is a new way of thinking about panes in Sublime Text: you tell Sublime Text where you want a new pane, and it makes one for you.  This plugin was adapted from the Origami plugin in the Sublime Text 2 repository.
 
 Ordinarily one uses the commands under View>Layout, or if one is quite intrepid a custom keyboard shortcut can be made to give a specific layout, but both of these solutions were unsatisfactory to me. Perhaps they were to you too! That's what this plugin is for.
 
@@ -8,7 +8,7 @@ Try it out! I think you'll like it.
 
 Keyboard shortcuts
 ------------------
-Origami is driven by keyboard shortcuts. By default, these keyboard shortcuts are all two-stage, and are hidden behind `super+k`. First press `super+k`, then press the arrow keys with modifiers:
+The Layout Manager plugin is driven by keyboard shortcuts. By default, these keyboard shortcuts are all two-stage, and are hidden behind `super+k`. First press `super+k`, then press the arrow keys with modifiers:
 
 * no modifiers: travel to an adjacent pane
 * `super`: carry the current file to the destination, creating a pane if needed.
@@ -35,7 +35,7 @@ Go to your Packages subdirectory under ST2's data directory:
 
 Then clone this repository:
 
-    git clone git://github.com/bheklilr/Origami-2.git
+    git clone git://github.com/bheklilr/LayoutManager.git
 
 That's it!
 
